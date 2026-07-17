@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './AboutUs.css'
 import clientsBoardImage from '../assets/images/10-1-1536x1086.jpg'
 import caseStudiesImage from '../assets/images/08-1-1536x1086.jpg'
 import companyLogo from '../assets/images/70876953_108760627238592_8569903641920536576_n-removebg-preview.png'
-// Import your video - adjust the path/filename as needed
-import aboutVideo from '../assets/videos/d7m.mp4' // Change filename to match yours
+// Import your video - change filename to match yours
+import aboutVideo from '../assets/videos/d7m.mp4'
 
 const stats = [
   { label: 'Years In Industry', value: '16+' },
@@ -49,7 +49,8 @@ const processSteps = [
 ]
 
 function AboutUs() {
-  // Reuse the same reveal animation from homepage
+  const location = useLocation()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -70,7 +71,6 @@ function AboutUs() {
 
   return (
     <div className="about-page">
-      {/* ====== MAIN NAVIGATION (matching App.jsx) ====== */}
       <nav className="glass-header nav-bar">
         <div className="nav-inner">
           <div className="brand-block">
@@ -83,9 +83,9 @@ function AboutUs() {
           </div>
 
           <div className="desktop-links">
-            <Link to="/">HOME</Link>
-            <Link to="/about-us" className="active-link">ABOUT US</Link>
-            <a href="/#services">SERVICE</a>
+            <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
+            <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
+            <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
             <a href="/#blog">BLOG</a>
             <a href="/#contact">CONTACT</a>
           </div>
@@ -96,7 +96,6 @@ function AboutUs() {
         </div>
       </nav>
 
-      {/* ====== HERO SECTION ====== */}
       <section className="about-hero" data-reveal>
         <div className="about-hero-inner">
           <p className="about-kicker">
@@ -115,7 +114,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* ====== STATS SECTION ====== */}
       <section className="about-stats" aria-label="Company Stats">
         {stats.map((item) => (
           <article className="stat-card bento-card" data-reveal key={item.label}>
@@ -125,7 +123,6 @@ function AboutUs() {
         ))}
       </section>
 
-      {/* ====== STORY SECTION WITH VIDEO ====== */}
       <section className="about-story-section" aria-label="Our Story">
         <div className="about-story-grid">
           <div className="about-story-content" data-reveal>
@@ -149,7 +146,6 @@ function AboutUs() {
             </div>
           </div>
           
-          {/* ====== VIDEO PLAYER ====== */}
           <div className="about-story-visual" data-reveal>
             <video
               className="about-video"
@@ -159,7 +155,6 @@ function AboutUs() {
               loop
               playsInline
               controls
-              poster={aboutVideo} // Optional: use a thumbnail image instead
             >
               Your browser does not support the video tag.
             </video>
@@ -167,7 +162,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* ====== VALUES SECTION ====== */}
       <section className="about-values" aria-label="Core Values">
         <div className="section-header section-header-center" data-reveal>
           <div className="section-title-row section-title-row-center">
@@ -189,7 +183,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* ====== PROCESS SECTION ====== */}
       <section className="about-process" aria-label="Our Process">
         <div className="section-header" data-reveal>
           <div className="section-title-row">
@@ -210,7 +203,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* ====== CLIENTS SECTION ====== */}
       <section className="about-clients" aria-label="Clients And Projects">
         <div className="section-header section-header-center" data-reveal>
           <div className="section-title-row section-title-row-center">
@@ -256,7 +248,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* ====== CTA SECTION ====== */}
       <section className="about-cta" data-reveal aria-label="Contact Call To Action">
         <div className="cta-inner">
           <h3>Have A Project In Mind?</h3>
@@ -268,7 +259,6 @@ function AboutUs() {
         </div>
       </section>
 
-      {/* ====== BACK TO TOP BUTTON ====== */}
       <button
         className="to-top"
         type="button"

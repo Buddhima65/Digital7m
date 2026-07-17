@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import companyLogo from './assets/images/70876953_108760627238592_8569903641920536576_n-removebg-preview.png'
 import teamWorkImage from './assets/images/126b6202-23a3-42ea-9bec-a069bb3c3d9a.jpg'
 import './App.css'
@@ -59,6 +59,8 @@ const services = [
 ]
 
 function App() {
+  const location = useLocation()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -91,11 +93,9 @@ function App() {
           </div>
 
           <div className="desktop-links">
-            <a className="active-link" href="#home">
-              HOME
-            </a>
-            <Link to="/about-us">ABOUT US</Link>
-            <a href="#services">SERVICE</a>
+            <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
+            <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
+            <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
             <a href="#blog">BLOG</a>
             <a href="#contact">CONTACT</a>
           </div>
@@ -325,8 +325,8 @@ function App() {
           <div>
             <h5>Quick Links</h5>
             <ul>
-              <li>About Us</li>
-              <li>Services</li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
               <li>Projects</li>
               <li>Blog</li>
             </ul>
