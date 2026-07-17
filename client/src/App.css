@@ -357,21 +357,6 @@
   line-height: 1.3;
 }
 
-.service-featured {
-  background: #50dba6;
-  border-color: #50dba6;
-}
-
-.service-featured h4,
-.service-featured p,
-.service-featured .service-icon {
-  color: #083223;
-}
-
-.service-active-border {
-  border-bottom: 3px solid #4edea3;
-}
-
 .works-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

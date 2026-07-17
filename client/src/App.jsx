@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import companyLogo from './assets/images/70876953_108760627238592_8569903641920536576_n-removebg-preview.png'
 import teamWorkImage from './assets/images/126b6202-23a3-42ea-9bec-a069bb3c3d9a.jpg'
 import './App.css'
@@ -29,7 +30,6 @@ const services = [
     icon: 'web',
     title: 'UI Designs',
     text: 'This board is a showcase of some of the best examples of UI Design for Mobile Apps and the Web.',
-    featured: true,
   },
   {
     icon: 'insights',
@@ -55,7 +55,6 @@ const services = [
     icon: 'hub',
     title: 'Social Media',
     text: 'Collective term for websites and applications that focus on communication, community-based input, and interaction.',
-    activeBorder: true,
   },
 ]
 
@@ -95,7 +94,7 @@ function App() {
             <a className="active-link" href="#home">
               HOME
             </a>
-            <a href="#about">ABOUT</a>
+            <Link to="/about-us">ABOUT US</Link>
             <a href="#services">SERVICE</a>
             <a href="#blog">BLOG</a>
             <a href="#contact">CONTACT</a>
@@ -169,8 +168,7 @@ function App() {
         <div className="services-grid">
           {services.map((service) => (
             <article
-              className={`bento-card service-card${service.featured ? ' service-featured' : ''}${service.activeBorder ? ' service-active-border' : ''}`}
-              data-reveal
+              className="bento-card service-card"
               key={service.title}
             >
               <span className="material-symbols-outlined service-icon" aria-hidden="true">
