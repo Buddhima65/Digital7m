@@ -96,13 +96,11 @@ function App() {
   <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
   <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
   <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-  <a href="#blog">BLOG</a>
+  
   <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>
 </div>
 
-          <button className="start-button" type="button">
-            Get Started
-          </button>
+          
         </div>
       </nav>
 
@@ -126,9 +124,7 @@ function App() {
               <button className="primary-action" type="button">
                 Explore Our Portfolio
               </button>
-              <button className="secondary-action" type="button">
-                Client Portal
-              </button>
+             
             </div>
           </div>
 

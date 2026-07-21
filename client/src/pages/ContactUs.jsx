@@ -123,13 +123,11 @@ function ContactUs() {
             <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
             <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
             <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-            <a href="/#blog">BLOG</a>
+            
             <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>
           </div>
 
-          <button className="start-button" type="button">
-            Get Started
-          </button>
+          
         </div>
       </nav>
 

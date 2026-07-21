@@ -174,13 +174,11 @@ function Services() {
   <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
   <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
   <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-  <a href="/#blog">BLOG</a>
+  
   <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>  {/* ← CHANGE TO THIS */}
 </div>
 
-          <button className="start-button" type="button">
-            Get Started
-          </button>
+         
         </div>
       </nav>
 
@@ -199,7 +197,7 @@ function Services() {
           </p>
           <div className="services-hero-actions">
             <a href="#all-services" className="primary-action">Explore All Services</a>
-            <a href="/#contact" className="secondary-action">Get A Quote</a>
+            
           </div>
         </div>
       </section>
@@ -315,16 +313,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="services-cta" data-reveal>
-        <div className="cta-inner">
-          <h3>Ready To Elevate Your Brand?</h3>
-          <p>Let's create something extraordinary together. Get in touch today.</p>
-          <div className="cta-actions">
-            <a href="/#contact" className="primary-action">Start Your Project</a>
-            <a href="/#contact" className="secondary-action">Schedule A Call</a>
-          </div>
-        </div>
-      </section>
+  
 
       <button
         className="to-top"

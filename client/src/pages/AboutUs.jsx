@@ -86,13 +86,11 @@ function AboutUs() {
   <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
   <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
   <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-  <a href="/#blog">BLOG</a>
+  
   <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>  {/* ← CHANGE TO THIS */}
 </div>
 
-          <button className="start-button" type="button">
-            Get Started
-          </button>
+         
         </div>
       </nav>
 
@@ -248,16 +246,7 @@ function AboutUs() {
         </div>
       </section>
 
-      <section className="about-cta" data-reveal aria-label="Contact Call To Action">
-        <div className="cta-inner">
-          <h3>Have A Project In Mind?</h3>
-          <p>Let us shape your next digital move with strategy, creativity, and precision delivery.</p>
-          <div className="cta-actions">
-            <a href="/#contact" className="primary-action">Book A Consultation</a>
-            <a href="/#services" className="secondary-action">Explore Services</a>
-          </div>
-        </div>
-      </section>
+    
 
       <button
         className="to-top"
