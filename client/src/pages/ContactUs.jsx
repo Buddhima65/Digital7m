@@ -87,22 +87,22 @@ function ContactUs() {
     {
       icon: '📍',
       title: 'Visit Us',
-      details: ['11850, Kadawatha', 'Sri Lanka']
+      details: ['Dalupitiya Rd, Kadawatha 11850, Sri Lanka']
     },
     {
       icon: '📞',
       title: 'Call Us',
-      details: ['+94 77 473 4086', '+94 11 234 5678']
+      details: ['+94 77 473 4086', '+94 11 2 902 765']
     },
     {
       icon: '✉️',
       title: 'Email Us',
-      details: ['7msales@digital7m.com', 'info@digital7m.com']
+      details: ['7msales@digital7m.com', 'Mihindumf@gmail.com']
     },
     {
       icon: '🕐',
       title: 'Working Hours',
-      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 2:00 PM']
+      details: ['Mon - Fri: 9:00 AM - 5:00 PM',]
     }
   ]
 
