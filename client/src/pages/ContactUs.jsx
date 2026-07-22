@@ -114,7 +114,7 @@ function ContactUs() {
             <img
               alt="Digital 7M Logo"
               className="logo-circle"
-              src="/src/assets/images/70876953_108760627238592_8569903641920536576_n-removebg-preview.png"
+              src={companyLogo}
             />
             <span className="brand-name">Digital 7M</span>
           </div>
