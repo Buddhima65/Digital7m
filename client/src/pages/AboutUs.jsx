@@ -77,7 +77,7 @@ function AboutUs() {
             <img
               alt="Digital 7M Logo"
               className="logo-circle"
-              src="/src/assets/images/70876953_108760627238592_8569903641920536576_n-removebg-preview.png"
+              src={companyLogo}
             />
             <span className="brand-name">Digital 7M</span>
           </div>
@@ -224,7 +224,7 @@ function AboutUs() {
         <div className="client-visual-grid">
           <article className="client-visual-card bento-card" data-reveal>
             <img
-              src="/src/assets/images/10-1-1536x1086.jpg"
+              src={clientsBoardImage}
               alt="Client portfolio board featuring partner brand logos handled by Digital 7M"
             />
             <div className="visual-caption">
@@ -235,7 +235,7 @@ function AboutUs() {
 
           <article className="client-visual-card bento-card" data-reveal>
             <img
-              src="/src/assets/images/08-1-1536x1086.jpg"
+              src={caseStudiesImage}
               alt="Case study summary featuring campaign outcomes for Unilever, SLT, and Red Bull"
             />
             <div className="visual-caption">
