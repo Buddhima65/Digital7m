@@ -121,9 +121,13 @@ function App() {
               complex data into elite digital experiences.
             </p>
             <div className="hero-actions">
-              <button className="primary-action" type="button">
-                Explore Our Portfolio
-              </button>
+              <button 
+  className="primary-action" 
+  type="button"
+  onClick={() => window.location.href = '/portfolio'}
+>
+  Explore Our Portfolio
+</button>
              
             </div>
           </div>
@@ -255,27 +259,9 @@ function App() {
             </div>
 
             <div className="right-stack">
-              <article className="photo-card bento-card">
-                <img
-                  alt="A modern office setting showing a young creative professional with a beard and glasses intensely focused on a laptop screen."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbxOPV-5LKgVrw00tPOHoK-z_w1Mrj0ODMpE8-1U_JBY7VR483xJI7rU1g_2PVHk8o2OtX2SE1h-OOnvDB7nK-YwKxJKPVsBKuYrQw2G89U2gospnxJ7ol-Lxfrm5smXgarrMA2u1AZ88G8Cb5I1rtFQ-wPuFsLSyWbkyOV78UImeh6_bBac8EbbmwHYyi_mFnmPKupKAVUc08tA3YKQsn2U0rXtcbDv1Tg2OF-zyyOtLk_EPPKAaXN6B1Jtt9wx3JbtCIB118Wj8"
-                />
-                <div className="photo-caption">
-                  <span>Philosophy</span>
-                  <p>Trust pays off</p>
-                </div>
-              </article>
+             
 
-              <article className="photo-card bento-card">
-                <img
-                  alt="A minimalist, high-end office workspace featuring several clean white desks with sleek monitors in a bright, sunlit room."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTNloUkhR45G6UIYBYULUTaIijTNr273iMsU3wYheGIISd4SECCB6_Y7OWspqy-Q8GgDgaHQGuFK8csx1m8G62rNFqrnjRgQ36eael5GbhwG-syZYMPLDl_0ZhtGHkOfz6k5fXOKQNdQER_huVTHgjgZBTigoqstIA5OngUG18WCEm_Vu8K0IdHRG2sSzdYZQSZaCt3wwsCdCxFzyddvWHa2DGpJDv1wSC28GTPBpy8dZIaXxv4-sg2rKM9TtqMUj20MxJGssnlXk"
-                />
-                <div className="photo-caption">
-                  <span>Office</span>
-                  <p>Somewhere on earth</p>
-                </div>
-              </article>
+              
             </div>
           </div>
         </div>
