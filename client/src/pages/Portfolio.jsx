@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Portfolio.css'
@@ -6,7 +5,6 @@ import companyLogo from '../assets/images/70876953_108760627238592_8569903641920
 import teamData from '../data/teamData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faTwitter, faFacebookF, faGithub, faDribbble, faBehance } from '@fortawesome/free-brands-svg-icons'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 function Portfolio() {
   const location = useLocation()
@@ -41,30 +39,13 @@ function Portfolio() {
 
   return (
     <div className="portfolio-page">
-      <nav className="glass-header nav-bar">
-        <div className="nav-inner">
-          <div className="brand-block">
-            <img
-              alt="Digital 7M Logo"
-              className="logo-circle"
-              src={companyLogo}
-            />
-            <span className="brand-name">Digital 7M</span>
-          </div>
-
-          <div className="desktop-links">
-            <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
-            <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
-            <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-            <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'active-link' : ''}>PORTFOLIO</Link>
-            <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>
-          </div>
-
-          <button className="start-button" type="button">
-            Get Started
-          </button>
-        </div>
-      </nav>
+      {/* ====== BACK BUTTON ONLY (NO NAV BAR) ====== */}
+      <div className="portfolio-back">
+        <Link to="/" className="back-button">
+          <span className="material-symbols-outlined">arrow_back</span>
+          Back to Home
+        </Link>
+      </div>
 
       {/* Hero Section */}
       <section className="portfolio-hero" data-reveal>
@@ -85,8 +66,22 @@ function Portfolio() {
 
       {/* Stats Section */}
       <section className="portfolio-stats" data-reveal>
-      
-       
+        <div className="stat-item">
+          <span className="stat-number">{teamData.length}+</span>
+          <span className="stat-label">Team Members</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-number">{new Set(teamData.map(m => m.department)).size}</span>
+          <span className="stat-label">Departments</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-number">50+</span>
+          <span className="stat-label">Projects Delivered</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-number">5+</span>
+          <span className="stat-label">Years Experience</span>
+        </div>
       </section>
 
       {/* Department Filter */}
@@ -118,7 +113,8 @@ function Portfolio() {
                   src={member.image} 
                   alt={member.name}
                   onError={(e) => {
-                    e.target.src = '/src/assets/images/team/buddhima.jpg'
+                    e.target.onerror = null;
+                    e.target.src = '/assets/images/team/placeholder.jpg'
                   }}
                 />
                 <div className="team-card-overlay">
@@ -151,7 +147,8 @@ function Portfolio() {
                   src={selectedMember.image} 
                   alt={selectedMember.name}
                   onError={(e) => {
-                    e.target.src = '/src/assets/images/team/images.jpg'
+                    e.target.onerror = null;
+                    e.target.src = '/assets/images/team/placeholder.jpg'
                   }}
                 />
               </div>
@@ -169,43 +166,42 @@ function Portfolio() {
                     <span key={index} className="skill-tag">{skill}</span>
                   ))}
                 </div>
-   <div className="modal-social">
-  {selectedMember.social.linkedin && (
-    <a href={selectedMember.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-link linkedin">
-      <FontAwesomeIcon icon={faLinkedinIn} />
-    </a>
-  )}
-  {selectedMember.social.twitter && (
-    <a href={selectedMember.social.twitter} target="_blank" rel="noopener noreferrer" className="social-link twitter">
-      <FontAwesomeIcon icon={faTwitter} />
-    </a>
-  )}
-  {selectedMember.social.facebook && (
-    <a href={selectedMember.social.facebook} target="_blank" rel="noopener noreferrer" className="social-link facebook">
-      <FontAwesomeIcon icon={faFacebookF} />
-    </a>
-  )}
-  {selectedMember.social.github && (
-    <a href={selectedMember.social.github} target="_blank" rel="noopener noreferrer" className="social-link github">
-      <FontAwesomeIcon icon={faGithub} />
-    </a>
-  )}
-  {selectedMember.social.dribbble && (
-    <a href={selectedMember.social.dribbble} target="_blank" rel="noopener noreferrer" className="social-link dribbble">
-      <FontAwesomeIcon icon={faDribbble} />
-    </a>
-  )}
-  {selectedMember.social.behance && (
-    <a href={selectedMember.social.behance} target="_blank" rel="noopener noreferrer" className="social-link behance">
-      <FontAwesomeIcon icon={faBehance} />
-    </a>
-  )}
-</div>
+                <div className="modal-social">
+                  {selectedMember.social.linkedin && (
+                    <a href={selectedMember.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-link linkedin">
+                      <FontAwesomeIcon icon={faLinkedinIn} />
+                    </a>
+                  )}
+                  {selectedMember.social.twitter && (
+                    <a href={selectedMember.social.twitter} target="_blank" rel="noopener noreferrer" className="social-link twitter">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                  )}
+                  {selectedMember.social.facebook && (
+                    <a href={selectedMember.social.facebook} target="_blank" rel="noopener noreferrer" className="social-link facebook">
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </a>
+                  )}
+                  {selectedMember.social.github && (
+                    <a href={selectedMember.social.github} target="_blank" rel="noopener noreferrer" className="social-link github">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  )}
+                  {selectedMember.social.dribbble && (
+                    <a href={selectedMember.social.dribbble} target="_blank" rel="noopener noreferrer" className="social-link dribbble">
+                      <FontAwesomeIcon icon={faDribbble} />
+                    </a>
+                  )}
+                  {selectedMember.social.behance && (
+                    <a href={selectedMember.social.behance} target="_blank" rel="noopener noreferrer" className="social-link behance">
+                      <FontAwesomeIcon icon={faBehance} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           </div>
-        
+        </div>
       )}
 
       <button

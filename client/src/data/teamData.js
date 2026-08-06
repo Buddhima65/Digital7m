@@ -62,7 +62,7 @@ const teamData = [
     social: {
       //linkedin: 'https://linkedin.com/in/nimal',
       //twitter: 'https://twitter.com/nimal',
-      facebook: 'https://facebook.com/nimal'
+      facebook: 'https://facebook.com/lakmali.wimalarathne.2025'
     },
     skills: ['SEO', 'SEM', 'Social Media', 'Content Marketing']
   },
@@ -78,7 +78,8 @@ const teamData = [
     social: {
       linkedin: 'https://linkedin.com/in/buddhima-sankalpa-a0a212385/',
       //twitter: 'https://twitter.com/chathuri'
-      facebook: 'https://facebook.com/buddhima.sankalpa.5'
+      facebook: 'https://facebook.com/buddhima.sankalpa.5',
+      github: 'https://github.com/Buddhima65'
     },
     skills: ['React', 'Node.js', 'Express', 'MongoDB', 'UI/UX Design']
   },

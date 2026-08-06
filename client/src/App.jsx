@@ -126,7 +126,7 @@ function App() {
   type="button"
   onClick={() => window.location.href = '/portfolio'}
 >
-  Explore Our Portfolio
+  Explore Our Team
 </button>
              
             </div>
