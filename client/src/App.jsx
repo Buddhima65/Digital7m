@@ -317,7 +317,7 @@ function App() {
           <div>
             <h5>Contact</h5>
             <ul>
-              <li>11850, Kadawatha, Sri lanka</li>
+              <li>15/10/5 Dalupitiya RD,Mahara,Kadawatha</li>
               <li>(94) 77 473 4086</li>
               <li>7msales@digital7m.com</li>
             </ul>
@@ -325,7 +325,7 @@ function App() {
         </div>
 
         <div className="footer-bottom">
-          <p>Copyright © Digital 7M | 2010 – 2025. All rights reserved.</p>
+          <p>Copyright © Digital 7M | 2010 – 2026. All rights reserved.</p>
           <div className="footer-icons">
             <a href="#home" aria-label="Website">
               <span className="material-symbols-outlined">public</span>

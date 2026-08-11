@@ -97,7 +97,7 @@ function ContactUs() {
     {
       icon: '📍',
       title: 'Visit Us',
-      details: ['Dalupitiya Rd, Kadawatha 11850, Sri Lanka']
+      details: ['15/10/5 Dalupitiya Rd, Mahara, Kadawatha']
     },
     {
       icon: '📞',
