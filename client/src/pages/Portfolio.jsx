@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Portfolio.css'
-import companyLogo from '../assets/images/70876953_108760627238592_8569903641920536576_n-removebg-preview.png'
+import companyLogo from '../assets/images/logo-01.png'
 import teamData from '../data/teamData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faTwitter, faFacebookF, faGithub, faDribbble, faBehance } from '@fortawesome/free-brands-svg-icons'
