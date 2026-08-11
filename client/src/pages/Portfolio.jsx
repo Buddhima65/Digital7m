@@ -65,39 +65,10 @@ function Portfolio() {
       </section>
 
       {/* Stats Section */}
-      <section className="portfolio-stats" data-reveal>
-        <div className="stat-item">
-          <span className="stat-number">{teamData.length}+</span>
-          <span className="stat-label">Team Members</span>
-        </div>
-        <div className="stat-item">
-          <span className="stat-number">{new Set(teamData.map(m => m.department)).size}</span>
-          <span className="stat-label">Departments</span>
-        </div>
-        <div className="stat-item">
-          <span className="stat-number">50+</span>
-          <span className="stat-label">Projects Delivered</span>
-        </div>
-        <div className="stat-item">
-          <span className="stat-number">5+</span>
-          <span className="stat-label">Years Experience</span>
-        </div>
-      </section>
+     
 
       {/* Department Filter */}
-      <section className="portfolio-filter" data-reveal>
-        <div className="filter-buttons">
-          {departments.map(dept => (
-            <button
-              key={dept}
-              className={`filter-btn ${selectedDepartment === dept ? 'active' : ''}`}
-              onClick={() => setSelectedDepartment(dept)}
-            >
-              {dept}
-            </button>
-          ))}
-        </div>
-      </section>
+  
 
       {/* Team Grid */}
       <section className="portfolio-grid" data-reveal>
