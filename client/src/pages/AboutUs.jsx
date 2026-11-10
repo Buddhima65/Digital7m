@@ -8,24 +8,24 @@ import companyLogo from '../assets/images/logo-01.png'
 import aboutVideo from '../assets/videos/about-ai-video.mp4'
 
 const stats = [
-  { label: 'Years In Industry', value: '16+' },
-  { label: 'Brands Supported', value: '120+' },
-  { label: 'Campaigns Delivered', value: '450+' },
+  { label: 'Years Experience', value: '10+' },
+  { label: 'FB Likes Managed', value: '9.2M' },
+  { label: 'Campaign Views', value: '92M+' },
   { label: 'Client Retention', value: '92%' },
 ]
 
 const values = [
   {
-    title: 'Strategy First',
-    text: 'Every project begins with audience insight, measurable goals, and a clear digital roadmap.',
+    title: 'Tailored Solutions',
+    text: 'We understand that every client is unique. We tailor our services to meet specific needs, whether it is building a new website, creating a social media strategy, or developing an e-commerce platform.',
   },
   {
-    title: 'Creative That Performs',
-    text: 'We combine design quality with conversion-focused thinking to deliver results, not just visuals.',
+    title: 'Exceptional Results',
+    text: 'We are committed to helping our clients succeed in the digital space. Our team works closely to ensure we deliver exceptional results that exceed expectations.',
   },
   {
-    title: 'Execution Discipline',
-    text: 'From launch to optimization, we run reliable workflows that keep quality and deadlines on track.',
+    title: 'Innovation First',
+    text: 'Our team is always up-to-date with the latest industry trends and technologies, using this knowledge to deliver innovative solutions that drive results.',
   },
 ]
 
@@ -82,15 +82,12 @@ function AboutUs() {
             <span className="brand-name">Digital 7M</span>
           </div>
 
-         <div className="desktop-links">
-  <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
-  <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
-  <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-  
-  <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>  {/* ← CHANGE TO THIS */}
-</div>
-
-         
+          <div className="desktop-links">
+            <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
+            <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
+            <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
+            <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>
+          </div>
         </div>
       </nav>
 
@@ -106,8 +103,8 @@ function AboutUs() {
             For Ambitious Brands
           </h1>
           <p>
-            Digital Seven M is a Sri Lanka based full-service digital agency helping brands grow with
-            strategy, creativity, and measurable execution since 2010.
+            Digital 7M is a full-service digital agency based in Sri Lanka that provides a wide range of digital services to clients worldwide. 
+            We empower businesses through innovative solutions and exceptional customer service.
           </p>
         </div>
       </section>
@@ -133,13 +130,10 @@ function AboutUs() {
             </div>
             <div className="story-text">
               <p>
-                We started with one simple belief: good design is not enough without clear business
-                impact. Over the years, we have partnered with local and global brands to turn ideas into
-                campaigns that connect, convert, and scale.
+                Digital 7M is a full-service digital agency based in Sri Lanka that provides a wide range of digital services to clients worldwide. Our team consists of highly skilled and experienced professionals in areas such as web development, graphic design, digital marketing, and social media management.
               </p>
               <p>
-                Our team blends strategy, content, design, and digital performance under one roof so every
-                touchpoint works together to move your brand forward.
+                With a focus on delivering exceptional results, we are committed to helping our clients succeed in the digital space. We have extensive experience in building websites and providing digital services to a variety of industries, including government, tourism, entertainment, and e-commerce.
               </p>
             </div>
           </div>
@@ -245,8 +239,6 @@ function AboutUs() {
           </article>
         </div>
       </section>
-
-    
 
       <button
         className="to-top"

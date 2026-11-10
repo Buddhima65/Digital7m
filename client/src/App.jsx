@@ -4,24 +4,31 @@ import companyLogo from './assets/images/logo-01.png'
 import teamWorkImage from './assets/images/126b6202-23a3-42ea-9bec-a069bb3c3d9a.jpg'
 import './App.css'
 
+// Client Logos
+import unileverLogo from './assets/images/clients/unilever.png'
+import airtelLogo from './assets/images/clients/airtel.png'
+import sltLogo from './assets/images/clients/slt.png'
+import dialogLogo from './assets/images/clients/dialog.png'
+import abansLogo from './assets/images/clients/abans.png'
+import darazLogo from './assets/images/clients/daraz.png'
+import tvLogo from './assets/images/clients/tvs.png'
+import canonLogo from './assets/images/clients/canon.png'
+
 const highlights = [
   {
     icon: 'send',
     title: 'Future Concept.',
-    text:
-      'Brands are now looking forward to boosting their presence online because of the presence of the target audience. Brands require the support of digital agencies and social media presence to promote and spread awareness about their products.',
+    text: 'Brands are now looking forward to boosting their presence online because of the presence of the target audience. Brands require the support of digital agencies and social media presence to promote and spread awareness about their products.',
   },
   {
     icon: 'public',
     title: 'The Big Ideas.',
-    text:
-      'Artificial intelligence is a key development in the 21st century. It is a major player in digital marketing, where data drives the action. There is much to do before we can analyze and find the patterns.',
+    text: 'Artificial intelligence is a key development in the 21st century. It is a major player in digital marketing, where data drives the action. There is much to do before we can analyze and find the patterns.',
   },
   {
     icon: 'lightbulb',
     title: 'Creative Solutions.',
-    text:
-      'Productive can help you improve your profitability and monitor your operations. Productive offers world-class support and product demonstrations to ensure everything is managed within the budget you set.',
+    text: 'Productive can help you improve your profitability and monitor your operations. Productive offers world-class support and product demonstrations to ensure everything is managed within the budget you set.',
   },
 ]
 
@@ -58,6 +65,49 @@ const services = [
   },
 ]
 
+// ====== CLIENT LOGOS ARRAY ======
+const clientLogos = [
+  { name: 'Unilever', logo: unileverLogo },
+  { name: 'Airtel', logo: airtelLogo },
+  { name: 'SLT', logo: sltLogo },
+  { name: 'Dialog', logo: dialogLogo },
+  { name: 'Abans', logo: abansLogo },
+  { name: 'Daraz', logo: darazLogo },
+  { name: 'TVS', logo: tvLogo },
+  { name: 'Canon', logo: canonLogo },
+]
+
+// ====== CASE STUDIES ARRAY ======
+const caseStudies = [
+  {
+    id: 1,
+    client: 'USAID',
+    title: 'Inter-Ethnic Harmony Campaign',
+    challenge: 'Preventing inter-ethnic conflict during the COVID-19 epidemic in Sri Lanka.',
+    strategy: 'Created viral memes and videos to promote inter-ethnic harmony through the theme of popular social media pages.',
+    result: 'Successfully prevented unrest. People understood the importance of working intelligently, and no incidents were reported.',
+    color: '#0056A4' // USAID Blue
+  },
+  {
+    id: 2,
+    client: 'SLT Mobitel',
+    title: 'Speedup Sawari 2015-2018',
+    challenge: 'Create awareness regarding the cycle campaign predominantly among youth aged 16-25.',
+    strategy: 'Ran a simultaneous social media campaign to promote the cycle contest across 20 major Facebook pages.',
+    result: 'The initial acquisition target was 2 million. At the conclusion of the campaign, the total turnout exceeded 3 million.',
+    color: '#009639' // SLT Green
+  },
+  {
+    id: 3,
+    client: 'Red Bull',
+    title: 'Viral Brand Engagement',
+    challenge: 'Maintain high brand engagement and awareness in a highly competitive beverage market.',
+    strategy: 'Leveraged popular social media meme pages to create sponsored content and viral videos.',
+    result: 'Massive organic reach and engagement, keeping Red Bull at the top of mind for the youth demographic.',
+    color: '#CC1E4A' // Red Bull Red
+  }
+]
+
 function App() {
   const location = useLocation()
 
@@ -92,15 +142,12 @@ function App() {
             <span className="brand-name">Digital 7M</span>
           </div>
 
-         <div className="desktop-links">
-  <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
-  <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
-  <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
-  
-  <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>
-</div>
-
-          
+          <div className="desktop-links">
+            <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>HOME</Link>
+            <Link to="/about-us" className={location.pathname === '/about-us' ? 'active-link' : ''}>ABOUT US</Link>
+            <Link to="/services" className={location.pathname === '/services' ? 'active-link' : ''}>SERVICE</Link>
+            <Link to="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>CONTACT</Link>
+          </div>
         </div>
       </nav>
 
@@ -122,13 +169,12 @@ function App() {
             </p>
             <div className="hero-actions">
               <button 
-  className="primary-action" 
-  type="button"
-  onClick={() => window.location.href = '/portfolio'}
->
-  Explore Our Team
-</button>
-             
+                className="primary-action" 
+                type="button"
+                onClick={() => window.location.href = '/portfolio'}
+              >
+                Explore Our Team
+              </button>
             </div>
           </div>
 
@@ -139,7 +185,6 @@ function App() {
             />
           </div>
         </div>
-
         <div className="hero-fade" />
       </header>
 
@@ -167,10 +212,7 @@ function App() {
 
         <div className="services-grid">
           {services.map((service) => (
-            <article
-              className="bento-card service-card"
-              key={service.title}
-            >
+            <article className="bento-card service-card" key={service.title}>
               <span className="material-symbols-outlined service-icon" aria-hidden="true">
                 {service.icon}
               </span>
@@ -181,38 +223,44 @@ function App() {
         </div>
       </section>
 
+      {/* ====== NEW CASE STUDIES SECTION ====== */}
       <section className="works-section" id="blog">
         <div className="section-header section-header-center" data-reveal>
           <div className="section-title-row section-title-row-center">
             <div className="section-line" />
-            <h2>Works</h2>
+            <h2>Case Studies</h2>
             <div className="section-line" />
           </div>
-          <p>Projects We Have Done</p>
+          <p>Proven Results For Global & Local Brands</p>
         </div>
 
-        <div className="works-grid">
-          <article className="bento-card work-card" data-reveal>
-            <img
-              alt="A clean, professional showcase of digital marketing case studies for brands like Unilever and Red Bull."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9sq64ccfR9KwhFVsB5EHcNbdH3gC5Faz8vFKoQi5FXl_cLEkjhjXhc8vE0T48xtd8aE8yRM8av5HosjamPk6BaDBmUy6GLis7kQofh9P2u9KGBvnCJ2Sf9hNGQQAMHe8WfqE5D1nnucWbG-zLpYleQIxYIfOSQu3Fa0oRLsQpBG_Mkx3WlbckWo3oISKZN5f3kWts2518i-ogHg23XRb-Pa-l0rwH1W4Kpb6zFgEb46ILWiUBaGHLtVqRDantpdULZNfkCUcaDDY"
-            />
-            <div className="work-overlay">
-              <p>Corporate Success</p>
-              <h4>Global Brand Case Studies</h4>
-            </div>
-          </article>
+        <div className="case-studies-grid">
+          {caseStudies.map((study) => (
+            <article className="case-study-card bento-card" data-reveal key={study.id}>
+              
+              <div className="cs-header" style={{ borderColor: study.color }}>
+                <span className="cs-client" style={{ color: study.color }}>{study.client}</span>
+              </div>
 
-          <article className="bento-card work-card" data-reveal>
-            <img
-              alt="A professional presentation layout showing digital transformation projects for government and NGO sectors."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6SfN557YyZGotdbR6Aka-q5qP2bcZcK2_FZRIGh6iMW6RSEAsTMEnHNveRm6Sk39JlyyE1A2bIbak7XRUBCCfvS2KNGl7ZMsbH4HTaqC9EzeHDc4E0GjwWvjFHH570cAwYZMEeBiRPLoN0Ko-zFO0OVcFiyOu7c-77VxN_x_9A4qoCnadb8PuwRdHwQjQXCP6noCn3OkyJBR69akGGXoofisZXsIU3PlS7dWMYqP-lNDE8dE7kAMCwEuqlWVG6wrimDWycOZNP2Y"
-            />
-            <div className="work-overlay">
-              <p>Strategic Partnerships</p>
-              <h4>International Development Projects</h4>
-            </div>
-          </article>
+              <h3 className="cs-title">{study.title}</h3>
+
+              <div className="cs-detail">
+                <strong>The Challenge:</strong>
+                <p>{study.challenge}</p>
+              </div>
+
+              <div className="cs-detail">
+                <strong>Our Strategy:</strong>
+                <p>{study.strategy}</p>
+              </div>
+
+              <div className="cs-result">
+                <strong>The Result:</strong>
+                <p>{study.result}</p>
+              </div>
+
+            </article>
+          ))}
         </div>
       </section>
 
@@ -250,18 +298,20 @@ function App() {
           </div>
 
           <div className="about-right" data-reveal>
-            <div className="partner-card bento-card">
-              <img
-                alt="A collage of high-profile client logos including Uber Eats, Unilever, Red Bull, and Sri Lankan Airlines."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEHIz6qr4L1E2RiUGAetyzdUS0x3FOBgSeob-7_D3fgiglMdUu1JOX7LuqSS28xZicHvRQ4j6vOb8wS4yLujL5Ck-9Ash_QnoWTzkJYaFlx7cos2QHYO0vyeiIhPEiqI4LRVClNQxuywyXhLcM0Gr2Tu0FeuCPjhCk_zdiRAqf7w7nt_intBr5rUnZdRYKZ3olRcU7jxPhGcslr-hVDAdGypbcYkRDWTmcwR9g3Dt53uDOWFlcwvODR52wbaeAvSKlftpXTtqcHnM"
-              />
-              <div className="partner-text">Our Trusted Partners</div>
+            {/* ====== CLIENT LOGOS SECTION ====== */}
+            <div className="partner-card bento-card partners-wrapper">
+              <h5 className="partners-title">Trusted By Industry Leaders</h5>
+              <div className="client-logos-grid">
+                {clientLogos.map((client, index) => (
+                  <div className="client-logo-item" key={index}>
+                    <img src={client.logo} alt={`${client.name} Logo`} />
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="right-stack">
-             
-
-              
+              {/* Empty stack for now */}
             </div>
           </div>
         </div>

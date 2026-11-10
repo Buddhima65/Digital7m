@@ -6,87 +6,67 @@ import companyLogo from '../assets/images/logo-01.png'
 const services = [
   {
     id: 1,
-    
-    title: 'UI/UX Design',
-    description: 'We create intuitive, user-centered designs that captivate audiences and drive engagement across all digital platforms.',
-    features: [
-      'User Research & Analysis',
-      'Wireframing & Prototyping',
-      'Visual Design Systems',
-      'Usability Testing',
-      'Responsive Design'
-    ],
+    icon: 'search',
+    title: 'SEO Optimization',
+    description: 'Search Engine Optimization to ensure your brand ranks at the top when your target audience searches for your services.',
+    features: ['Keyword Research', 'On-Page SEO', 'Technical SEO', 'Link Building', 'Performance Tracking'],
     color: '#4edea3'
   },
   {
     id: 2,
-    
-    title: 'Digital Strategy',
-    description: 'Data-driven strategies that align with your business goals, ensuring maximum ROI and sustainable growth in the digital landscape.',
-    features: [
-      'Market Analysis',
-      'Competitor Research',
-      'Goal Setting & KPIs',
-      'Channel Strategy',
-      'Performance Tracking'
-    ],
+    icon: 'ads_click',
+    title: 'Search Engine Marketing',
+    description: 'Pay-Per-Click (PPC) advertising and search engine marketing to get instant, highly targeted traffic to your website.',
+    features: ['Google Ads Setup', 'PPC Campaigns', 'A/B Testing', 'Conversion Tracking', 'ROI Optimization'],
     color: '#00b4ff'
   },
   {
     id: 3,
-    
-    title: 'Content Writing',
-    description: 'Compelling, SEO-optimized content that tells your brand story, engages your audience, and drives conversions.',
-    features: [
-      'Blog Posts & Articles',
-      'Website Copywriting',
-      'Social Media Content',
-      'SEO Content Strategy',
-      'Brand Storytelling'
-    ],
+    icon: 'hub',
+    title: 'Social Media Marketing',
+    description: 'Comprehensive social media strategies tailored for Facebook, Instagram, LinkedIn, TikTok, and YouTube.',
+    features: ['Content Strategy', 'Community Management', 'Paid Social Ads', 'Profile Optimization', 'Analytics & Insights'],
     color: '#ff6b9d'
   },
   {
     id: 4,
-    
-    title: 'Marketing Strategy',
-    description: 'Comprehensive marketing plans that leverage multiple channels to build brand awareness and generate qualified leads.',
-    features: [
-      'Campaign Planning',
-      'Multi-channel Execution',
-      'Lead Generation',
-      'Brand Positioning',
-      'Analytics & Reporting'
-    ],
+    icon: 'movie',
+    title: 'YouTube Content Marketing',
+    description: 'Engaging video content creation and channel management to build a loyal audience on YouTube.',
+    features: ['Channel Strategy', 'Video Scripting', 'SEO for Videos', 'Audience Engagement', 'Thumbnail Design'],
     color: '#ffb347'
   },
   {
     id: 5,
-    
-    title: 'Web Development',
-    description: 'Custom web solutions built with cutting-edge technologies, optimized for performance, security, and scalability.',
-    features: [
-      'Frontend Development',
-      'Backend Development',
-      'E-commerce Solutions',
-      'CMS Integration',
-      'Performance Optimization'
-    ],
+    icon: 'campaign',
+    title: 'Influencer Marketing',
+    description: 'Connect your brand with top-tier influencers to reach highly engaged audiences and build brand trust.',
+    features: ['Influencer Vetting', 'Campaign Management', 'Product Seeding', 'Performance Tracking', 'Contract Negotiation'],
     color: '#a855f7'
   },
   {
     id: 6,
-    
-    title: 'Social Media Management',
-    description: 'Strategic social media management that builds communities, increases brand loyalty, and drives meaningful engagement.',
-    features: [
-      'Content Calendar Management',
-      'Community Engagement',
-      'Paid Social Advertising',
-      'Analytics & Insights',
-      'Brand Monitoring'
-    ],
+    icon: 'mail',
+    title: 'Email Marketing',
+    description: 'Direct and personalized email campaigns to nurture leads, retain customers, and drive sales.',
+    features: ['List Building', 'Email Automation', 'Newsletter Design', 'A/B Testing', 'Deliverability Optimization'],
     color: '#f472b6'
+  },
+  {
+    id: 7,
+    icon: 'trending_up',
+    title: 'Viral Marketing',
+    description: 'Creative, highly shareable campaigns designed to spread rapidly across social channels.',
+    features: ['Meme Marketing', 'Trend Hijacking', 'User-Generated Content', 'Viral Loop Creation', 'Community Building'],
+    color: '#60a5fa'
+  },
+  {
+    id: 8,
+    icon: 'devices',
+    title: 'Mobile Advertising',
+    description: 'Targeted mobile phone advertising to reach users right where they spend most of their time.',
+    features: ['In-App Ads', 'SMS Marketing', 'Mobile Web Ads', 'Geo-Targeting', 'Retargeting'],
+    color: '#f59e0b'
   }
 ]
 
