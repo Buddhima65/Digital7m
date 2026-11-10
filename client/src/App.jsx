@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import companyLogo from './assets/images/logo-01.png'
 import teamWorkImage from './assets/images/126b6202-23a3-42ea-9bec-a069bb3c3d9a.jpg'
+import Hero from './components/Hero' // ← Import the new Hero component
 import './App.css'
 
 // Client Logos
@@ -65,7 +66,6 @@ const services = [
   },
 ]
 
-// ====== CLIENT LOGOS ARRAY ======
 const clientLogos = [
   { name: 'Unilever', logo: unileverLogo },
   { name: 'Airtel', logo: airtelLogo },
@@ -77,7 +77,6 @@ const clientLogos = [
   { name: 'Canon', logo: canonLogo },
 ]
 
-// ====== CASE STUDIES ARRAY ======
 const caseStudies = [
   {
     id: 1,
@@ -86,7 +85,7 @@ const caseStudies = [
     challenge: 'Preventing inter-ethnic conflict during the COVID-19 epidemic in Sri Lanka.',
     strategy: 'Created viral memes and videos to promote inter-ethnic harmony through the theme of popular social media pages.',
     result: 'Successfully prevented unrest. People understood the importance of working intelligently, and no incidents were reported.',
-    color: '#0056A4' // USAID Blue
+    color: '#0056A4'
   },
   {
     id: 2,
@@ -95,7 +94,7 @@ const caseStudies = [
     challenge: 'Create awareness regarding the cycle campaign predominantly among youth aged 16-25.',
     strategy: 'Ran a simultaneous social media campaign to promote the cycle contest across 20 major Facebook pages.',
     result: 'The initial acquisition target was 2 million. At the conclusion of the campaign, the total turnout exceeded 3 million.',
-    color: '#009639' // SLT Green
+    color: '#009639'
   },
   {
     id: 3,
@@ -104,7 +103,7 @@ const caseStudies = [
     challenge: 'Maintain high brand engagement and awareness in a highly competitive beverage market.',
     strategy: 'Leveraged popular social media meme pages to create sponsored content and viral videos.',
     result: 'Massive organic reach and engagement, keeping Red Bull at the top of mind for the youth demographic.',
-    color: '#CC1E4A' // Red Bull Red
+    color: '#CC1E4A'
   }
 ]
 
@@ -151,42 +150,8 @@ function App() {
         </div>
       </nav>
 
-      <header className="hero-section gradient-mesh" id="home">
-        <div className="hero-inner">
-          <div className="hero-copy" data-reveal>
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              <span>CREATIVE MIND, CREATIVE WORKS.</span>
-            </div>
-            <h1>
-              We Are <span>Digital</span>
-              <br />
-              Agency
-            </h1>
-            <p>
-              Sovereign precision in engineering meets bold creative vision. We transform
-              complex data into elite digital experiences.
-            </p>
-            <div className="hero-actions">
-              <button 
-                className="primary-action" 
-                type="button"
-                onClick={() => window.location.href = '/portfolio'}
-              >
-                Explore Our Team
-              </button>
-            </div>
-          </div>
-
-          <div className="hero-visual" data-reveal>
-            <img
-              alt="A high-end surrealistic visual featuring a vibrant cyan-colored flamingo and a desaturated gray flamingo standing together against a deep charcoal-black void."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHTRIe7HqQnsbmxISyqrlb5kOs1CV-gIOe81uNr2hzM_9FXvqJkKsqenxC51BGYUdCNGtoKZ_IX_9YzZEE8Yw5uznCgS7yOZK_HL3xQqUlZHrKTEM5nZL_HzDzBHibbrBG2IP0rham53ZVCs5hujsBk5M4G0dfZgENE_XxUwprvHJ7A_s2994J21bUtp-a0KW23PNCph3wKn9YJ8oOM6ug0ltpCWw5Clc10aF6jI3BfGYFQFHmUt4r8N_MSpfYjk7mRqA3wJfHXHg"
-            />
-          </div>
-        </div>
-        <div className="hero-fade" />
-      </header>
+      {/* ====== NEW MODERN HERO COMPONENT ====== */}
+      <Hero />
 
       <section className="section-grid" aria-label="Highlights">
         {highlights.map((item) => (
@@ -223,7 +188,6 @@ function App() {
         </div>
       </section>
 
-      {/* ====== NEW CASE STUDIES SECTION ====== */}
       <section className="works-section" id="blog">
         <div className="section-header section-header-center" data-reveal>
           <div className="section-title-row section-title-row-center">
@@ -237,28 +201,22 @@ function App() {
         <div className="case-studies-grid">
           {caseStudies.map((study) => (
             <article className="case-study-card bento-card" data-reveal key={study.id}>
-              
               <div className="cs-header" style={{ borderColor: study.color }}>
                 <span className="cs-client" style={{ color: study.color }}>{study.client}</span>
               </div>
-
               <h3 className="cs-title">{study.title}</h3>
-
               <div className="cs-detail">
                 <strong>The Challenge:</strong>
                 <p>{study.challenge}</p>
               </div>
-
               <div className="cs-detail">
                 <strong>Our Strategy:</strong>
                 <p>{study.strategy}</p>
               </div>
-
               <div className="cs-result">
                 <strong>The Result:</strong>
                 <p>{study.result}</p>
               </div>
-
             </article>
           ))}
         </div>
@@ -298,7 +256,6 @@ function App() {
           </div>
 
           <div className="about-right" data-reveal>
-            {/* ====== CLIENT LOGOS SECTION ====== */}
             <div className="partner-card bento-card partners-wrapper">
               <h5 className="partners-title">Trusted By Industry Leaders</h5>
               <div className="client-logos-grid">
@@ -309,7 +266,6 @@ function App() {
                 ))}
               </div>
             </div>
-
             <div className="right-stack">
               {/* Empty stack for now */}
             </div>
